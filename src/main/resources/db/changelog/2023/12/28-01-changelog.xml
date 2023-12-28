@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1703738100230-1" author="mohaimanulislam (generated)">
+        <createSequence incrementBy="50" sequenceName="user_profile_seq" startValue="1"/>
+    </changeSet>
+    <changeSet id="1703738100230-2" author="mohaimanulislam (generated)">
+        <createTable tableName="cash_card">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_cashcard"/>
+            </column>
+            <column name="amount" type="DOUBLE"/>
+            <column name="owner" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1703738100230-3" author="mohaimanulislam (generated)">
+        <createTable tableName="user_profile">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_user_profile"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="user_name" type="VARCHAR(255)"/>
+            <column name="password" type="BIGINT"/>
+            <column name="email" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
